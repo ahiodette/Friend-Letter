@@ -29,5 +29,14 @@ public class App {
             return new ModelAndView(model, "form.hbs");
         }, new HandlebarsTemplateEngine());
 
+        get("/greeting_card", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            String recipient = request.queryParams("recipient");
+            String sender = request.queryParams("sender");
+            model.put("recipient", recipient);
+            model.put("sender", sender);
+            return new ModelAndView(model, "greeting_card.hbs");
+        }, new HandlebarsTemplateEngine());
+
     }
 }

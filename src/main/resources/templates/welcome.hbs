@@ -1,0 +1,21 @@
+{{#partial "content"}}
+
+    <!--welcome hbs-->
+    {{#if username }}
+    Welcome {{ username }}
+{{ else }}
+    <form action="/Welcome" method="post">
+        <label for="username">Your name</label>
+        <input id="username" name="username" type="text">
+
+        <button type="submit">Submit name</button>
+    </form>
+    {{/if }}
+
+    <a href="/">Return to home page</a>
+{{/partial}}
+
+{{> layout.hbs}}
+
+
+<!--welcome hbs-->

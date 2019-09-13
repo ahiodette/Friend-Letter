@@ -38,7 +38,7 @@ public class App {
             return new ModelAndView(model, "greeting_card.hbs");
         }, new HandlebarsTemplateEngine());
 
-        get("/", (request, response) -> {
+        get("/ss", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
             model.put("username", request.session().attribute("username"));
             return new ModelAndView(model, "welcome.hbs");
